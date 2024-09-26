@@ -49,6 +49,9 @@ Complete the exercise in the space below:
 */
 
 const isCharAVowel = (char) => {
+  if (char.length !== 1) {
+    return false;
+  }
   const vowels = "aeiou";
   return vowels.includes(char.toLowerCase());
 };
@@ -175,7 +178,7 @@ const basicCalculator = (a, b, operation) => {
     case "multiply":
       return a * b;
     case "divide":
-      return b !== 0 ? a / b : "Cannot divide by zero";
+      return b !== 0 ? a / b : "Error: Divide by zero";
     default:
       return "Invalid operation";
   }
